@@ -1,0 +1,189 @@
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(45deg,rgb(13, 13, 14),rgb(0, 0, 64));
+}
+
+.container {
+  width: 55%;
+  margin: 20px auto;
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.flex{
+  display: flex;
+  justify-content: space-between;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-bottom: 25px;
+}
+
+.logo {
+  display: block;
+  width: 150px;
+  
+}
+
+/* Header Section */
+h2 {
+  text-align: center;
+  color: #1f1d1d;
+}
+
+h3 {
+  margin-top: 20px;
+  color: #080129;
+}
+
+/* Form Section */
+.form-section label {
+  display: block;
+  margin-top: 10px;
+  font-weight: bold;
+  color: #444;
+}
+
+.form-section select,
+.form-section input[type="number"],
+.form-section input[type="text"] {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  border: 1px solid #017e0c;
+  border-radius: 4px;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+.form-section .btns{
+  text-align: center;
+}
+
+.form-section button {
+  margin: 10px 5px 0 0;
+  padding: 10px 25px;
+  font-size: 14px;
+  color: #ffffff;
+  background-color: #a10000;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+}
+
+.form-section button:hover {
+  background-color: #0056b3;
+}
+
+/* Table Styles */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+table th,
+table td {
+  border: none;
+  padding: 10px;
+  text-align: left;
+}
+
+table th {
+  background: linear-gradient(45deg,rgb(1, 1, 57),rgb(0, 0, 0));
+  color: white;
+  font-weight: bold;
+}
+
+table tr:nth-child(even) {
+  background: linear-gradient(45deg,rgb(146, 246, 234),rgb(237, 255, 253));
+}
+
+/* Report Section */
+.report-section {
+  margin-top: 30px;
+  padding: 15px;
+  background-color: #f8f9fa;
+  border: 2px solid #0038a8;
+  border-radius: 4px;
+}
+
+.report-section h3{
+  text-align: center;
+  font-size: 22px;
+}
+
+.report-section p {
+  margin: 10px 0;
+}
+
+.report-section span {
+  font-weight: bold;
+  color: #333;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .container {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .form-section label,
+  .form-section select,
+  .form-section input[type="number"],
+  .form-section button {
+    font-size: 14px;
+  }
+
+  table th,
+  table td {
+    font-size: 12px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Style the entire scrollbar */
+::-webkit-scrollbar {
+  width: 20px; /* Horizontal scrollbar width */
+  height: 12px; /* Vertical scrollbar height */
+}
+
+/* Style the scrollbar track (the area the thumb slides within) */
+::-webkit-scrollbar-track {
+  background: #f1f1f1; /* Light grey background */
+  border-radius: 10px;
+}
+
+/* Style the scrollbar thumb (the draggable part) */
+::-webkit-scrollbar-thumb {
+  background: #888; /* Grey color for the thumb */
+  border-radius: 10px;
+}
+
+/* Style the thumb when it is hovered */
+::-webkit-scrollbar-thumb:hover {
+  background: #555; /* Darker grey when hovering */
+}
+
+/* Optional: Style for the scrollbar corner (where horizontal and vertical scrollbars meet) */
+::-webkit-scrollbar-corner {
+  background: #f1f1f1;
+}

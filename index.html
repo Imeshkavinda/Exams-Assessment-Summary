@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Marks Report</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.js"></script>
+
+</head>
+<body>
+
+  <div class="container">
+    <div class="flex">
+      <img src="logo.jpeg" alt="Logo" class="logo" />
+    <h2>Student Performance Report</h2>
+    </div>
+    
+    <!-- Form for Exam Details -->
+    <div class="form-section">
+      <label for="examType">Exam Type:</label>
+      <select id="examType" required>
+        <option value="">Select Exam Type</option>
+        <option value="Quick Assessment">Quick Assessment</option>
+        <option value="Knowledge Check">Knowledge Check</option>
+        <option value="Short Quiz">Short Quiz</option>
+        <option value="Weekly Test">Weekly Test</option>
+        <option value="End-of-Month Exam">End-of-Month Exam</option>
+        <option value="Past Paper">Past Paper</option>
+        <option value="Model Paper">Model Paper</option>
+        <option value="Final Exam">Final Exam</option>
+      </select>
+
+      <label for="subjectName">Subject Name:</label>
+      <select id="subjectName" required>
+        <option value="">Select Subject</option>
+        <option value="Fundamentals of Programming">Fundamentals of Programming</option>
+        <option value="Web Design">Web Design</option>
+        <option value="Computer Systems">Computer Systems</option>
+        <option value="Mathematics & Statistics for IT">Mathematics & Statistics for IT</option>
+        <option value="Communication Skills Development">Communication Skills Development</option>
+        <option value="ICT Skills & Applications">ICT Skills & Applications</option>
+      </select>
+
+      <label for="papername">Paper Name:</label>
+      <input type="text" id="papername" placeholder="Enter Paper Name" required>
+
+      <label for="totalQuestions">Total Questions:</label>
+      <input type="number" id="totalQuestions" placeholder="Enter Total Questions" required>
+
+      <h3>Enter Student Details</h3>
+      <table id="studentTable">
+        <tr>
+          <th>Student Name</th>
+          <th>Correct Answers</th>
+        </tr>
+      </table>
+
+      <div class="btns">
+        <button type="button" onclick="addStudentRow()">Add Student</button>
+        <button type="button" onclick="generateReport()">Generate Report</button>
+        <button type="button" onclick="downloadPDF()">Download Report</button>
+      </div>
+    </div>
+
+    <!-- Results Section -->
+    <div id="report" class="report-section">
+      <h3>Exam Results Summary</h3>
+      <p><strong>Exam Type:</strong> <span id="reportExamType"></span></p>
+      <p><strong>Subject:</strong> <span id="reportSubjectName"></span></p>
+      <p><strong>Paper Name:</strong> <span id="reportPaperName"></span></p>
+      <table id="resultsTable">
+        <tr>
+          <th>Student Name</th>
+          <th>Marks</th>
+          <th>Correct Answers</th>
+          <th>Wrong Answers</th>
+          <th>Grade</th>
+        </tr>
+      </table>
+      <p><strong>Average Marks of All Students:</strong> <span id="avgMarks"></span></p>
+      <p><strong>Top Scorer:</strong> <span id="topScorer"></span></p>
+      <p><strong>Lowest Scorer:</strong> <span id="lowScorer"></span></p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+ 
+</body>
+</html>
